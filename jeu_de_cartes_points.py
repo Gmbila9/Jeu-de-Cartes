@@ -6,7 +6,8 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
-
+# Gere la création de de cartes
+# La méthode points renvoie 50 points pour les cartes rouges et 25 points pour les cartes noires
 class Carte:
     def __init__(self, valeur, couleur):
         self.valeur = valeur
@@ -20,7 +21,7 @@ class Carte:
             return 50
         else:
             return 25
-
+# Gère le jeu de cartes, y compris le mélange et le tirage des cartes.
 class JeuDeCartes:
     valeurs = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi', 'As']
     couleurs = ['Cœurs', 'Carreaux', 'Trèfles', 'Piques']
@@ -37,7 +38,7 @@ class JeuDeCartes:
             return None
         return self.jeu.pop()
 
-
+# Gère l'interface graphique du jeu.
 class JeuDeCartesGUI:
     def __init__(self, root):
         self.root = root
